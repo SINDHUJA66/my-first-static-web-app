@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Font Delivery</title>
+    <style>
+	@import url('https://fonts.cdnfonts.com/css/french-fries-apocalypse');
+        /* Add some basic CSS for readability */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        /* Add the @font-face rule to specify the font source */
+        @font-face {
+            font-family: 'French Fries Apocalypse'; /* Name your font */
+            src: url('uniquefont.woff2') format('woff2'); /* Specify the font file path and format */
+        }
+
+        /* Use the unique font for the text */
+        .unique-text {
+            font-family: 'French Fries Apocalypse', sans-serif;
+            font-size: 24px; /* Adjust the font size as needed */
+        }
+    </style>
+</head>
+<body>
+    <h1>Web Font Delivery</h1>
+    <p>
+        There are a few different methods for delivering fonts to the client browser when building a website. One approach is to use web fonts, which allow fonts to be loaded from a server when a page is requested.
+    </p>
+    <p>
+	To use a web font, it first needs to be converted into a web-friendly format like WOFF or WOFF2. Then the font files can be hosted on a web server just like any other asset. In the CSS for the site, the web font can be specified using @font-face which defines the font files to load.
+    </p>
+    <p>
+	When the browser makes a request for the page, the web font files will be downloaded along with the rest of the site assets. The browser will have the fonts available to render text with the desired typography. Web fonts allow using any font on the web, not just default system fonts.
+	This is a simple method for delivering a custom font experience. It does increase page load size, so optimization techniques like font subsetting should be used. But overall, web fonts give great control over typography for branding and design on the web.
+    </p>
+
+    <!-- Use the unique font for the text -->
+    <p>
+        Here's some text that uses our unique font:
+        <span class="unique-text">This is the unique font style!</span>
+    </p>
+
+    <!-- You will need to upload 'uniquefont.woff2' to your web server for this to work -->
+
+</body>
+</html>
