@@ -23,6 +23,12 @@
             font-family: 'French Fries Apocalypse', sans-serif;
             font-size: 24px; /* Adjust the font size as needed */
         }
+
+        /* Apply the same style to a new class */
+        .unique-paragraph {
+            font-family: 'French Fries Apocalypse', sans-serif;
+            font-size: 24px; /* Adjust the font size as needed */
+        }
     </style>
 </head>
 <body>
@@ -30,7 +36,7 @@
     <p>
         There are a few different methods for delivering fonts to the client browser when building a website. One approach is to use web fonts, which allow fonts to be loaded from a server when a page is requested.
     </p>
-    <p>
+    <p class="unique-paragraph">
 	To use a web font, it first needs to be converted into a web-friendly format like WOFF or WOFF2. Then the font files can be hosted on a web server just like any other asset. In the CSS for the site, the web font can be specified using @font-face which defines the font files to load.
     </p>
     <p>
