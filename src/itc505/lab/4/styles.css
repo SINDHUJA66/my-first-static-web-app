@@ -1,0 +1,60 @@
+body {
+    background-color: #EFEFEF;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2 {
+    font-family: "Georgia", serif;
+}
+
+h1 {
+    font-size: 36px;
+    color: red;
+	text-decoration: underline;
+}
+
+h2 {
+    font-size: 28px; 
+    color: blue;
+	font-family: "Cursive", cursive;
+}
+
+p {
+	background-color: #FAEBD7;
+    font-family: "Cursive", cursive;
+    font-size: 16px;
+    font-weight: normal;
+    font-style: normal;
+    color: #556B2F;
+    margin: 10px 0;
+}
+
+b {
+    font-weight: bold;
+    color: #555;
+}
+
+p:first-of-type {
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    font-size: 20px;
+    font-weight: normal;
+    font-style: normal;
+    color: #556B2F;
+	font-family: 'Papyrus', cursive;
+}
+article {
+    border: 1px solid #ccc; 
+    padding: 20px;
+    background-color: #fff;
+    margin-bottom: 20px;
+}
+
+/* Style the "Addendum" section */
+h2 + p {
+    font-family: "Courier New", monospace;
+    font-size: 14px;
+    color: #777;
+}
