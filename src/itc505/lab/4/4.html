@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="2.css">
+</head>
+<body>
+
+<h1>Detection of Social Network Mental Disorders Through  Mining of Online Social Media </h1>
+
+<h1><h2>By Sindhuja Enugula1, Shireen Begum2, Deepak Kumar Gandham3 and  K. VenkataRamu4</h2></h1>
+
+<article>
+  <h2>Abstract</h2>
+  <p>The explosive growth in popularity of social networking leads to the problematic usage.  An increasing number of social network mental disorders (SNMDs), such as Cyber Relationship Addiction, Information Overload, and Net Compulsion, have been recently  noted. Symptoms of these mental disorders are usually observed passively today, resulting  in delayed clinical intervention. In this paper, we argue that mining online social behavior  provides an opportunity to actively identify SNMDs at an early stage. Itis challenging to  detect SNMDs because the mental status cannot be directly observed from online social  activity logs. Our approach, new and innovative to the practice of SNMD detection, does  not rely on self-revealing of those mental factors via questionnaires in Psychology.  Instead, we propose a machine learning framework, namely, logistic regression model  (LRM), that exploits features extracted from social network data to accurately identify  potential cases of SNMDs. We also exploit the comparative evaluation with K-nearest  neighbour (KNN) classifier.</p>
+</article>
+
+<article>
+  <h2>Introduction</h2>
+  <p>With the explosive growth in popularity of social networking and messaging apps, online  social networks (OSNs) have become a part of many people’s daily lives. Most research  on social network mining focuses on discovering the knowledge behind the data for  improving people’s life. While OSNs seemingly expand their users’ capability in  increasing social contacts, they may decrease the face-to-face interpersonal interactions in  the real world. Due to the epidemic scale of these phenomena, new terms such as  Phubbing (Phone Snubbing) and Nomophobia (No Mobile Phone Phobia) have been  created to describe those who cannot stop using mobile social networking apps. In fact,  some social network mental disorders (SNMDs), such as Information Overload and Net Compulsion [1], have been recently noted. For example, studies point out that 1 in 8  Americans suffer from problematic Internet use. Moreover, leading journals in mental  health, such as the American Journal of Psychiatry [2], have reported that the SNMDs  may incur excessive use, depression, social withdrawal, and a range of other negative  repercussions. Indeed, these symptoms are important components of diagnostic criteria  for SNMDs [3] e.g., excessive use of social networking apps – usually associated with a  loss of the sense of time or a neglect of basic drives, and withdrawal – including feelings 
+of anger, tension, and/or depression when the computer/apps are inaccessible. SNMDs are social-oriented and tend to happen to users who usually interact with others via online  social media. </p>
+  
+</article>
+
+<article>
+  <h2>RELATED WORK</h2>
+  <p>Internet Addiction Disorder (IAD) is a type of behavior addiction with the patients  addicted to the Internet, just like those addicting to drugs or alcohol [3]. Many research works in Psychology and Psychiatry have studied the important factors, possible consequences, and correlations of IAD [10]. King et al.[11] investigate the problem of simulated gambling via digital and social media to analyse the correlation of different  
+factors, e.g., grade, ethnicity. Li et al. [12] examine the risk factors related to Internet  addiction. Kim et al. [13] investigate the association of sleep quality and suicide attempt  of Internet addicts. On the other hand, recent research in Psychology and Sociology  reports several mental factors related to social network mental disorders. Research  indicates that young people with narcissistic tendencies and shyness are particularly  vulnerable to addiction with OSNs. However, the above research explores various  negative impacts and discusses potential reasons for Internet addiction. By contrast, this  paper proposes to automatically identify SNMD patients at the early stage according to  their OSN data with a novel tensor model that efficiently integrate heterogeneous data  from different OSNs.  
+Research on mental disorders in online social networks receives increasing attention  recently [14-16]. Among them, content-based textual features are extracted from user generated information (such as blog, social media) for sentiment analysis and topic  detection. Chang et. al [14] employ an NLP-based approach to collect and extract  linguistic and content-based features from online social media to identify Borderline  Personality Disorder and Bipolar Disorder patients. Saha et al. [15] extract the topical and  linguistic features from online social media for depression patients to analyse their  patterns. Choudhury et al. [16] analyse emotion and linguistic styles of social media data  for Major Depressive Disorder (MDD). However, most previous research focuses on  individual behaviours and their generated textual contents but do not carefully examine  the structure of social networks and potential Psychological features. Moreover, the  developed schemes are not designed to handle the sparse data from multiple OSNs. In  contrast, we propose a new multi-source machine learning approach, i.e., STM, to extract  proxy features in Psychology for different diseases that require careful examination of the OSN topologies, such as Cyber-Relationship Addiction and Net Compulsion.  
+Our framework is built upon LRM, which has been widely used to analyse OSNs in many areas. In addition, we present a new tensor model that not only incorporates the domain  knowledge but also well estimates the missing data and avoids noise to properly handle  multi-source data. Caballero et al. [8] estimate the probability of mortality in ICU by  modelling the probability of mortality as a latent state evolving over time. Zhao et al. [9]  propose a hierarchical learning method for event detection and forecasting by first extracting the features from different data sources and then learning via geographical  multi-level model. However, the SNMD data from different OSNs may be incomplete due  to the heterogeneity. For example, the profiles of users may be empty due to the privacy  issue, different functions on different OSNs (e.g., game, check-in, event),etc. We propose a novel tensor-based approach to address the issues of using heterogeneous data and  incorporate domain knowledge in SNMD detection. 
+</p>
+  
+</article>
+
+<article>
+  <h2>PROPOSED METHODOLOGY</h2>
+  <p>In this paper, we aim to explore data mining techniques to detect three types of SNMDs  [1]:  
+1) Cyber-Relationship (CR) Addiction, which includes the addiction to social  networking, checking, and messaging to the point where social relationships to virtual and  online friends become more important than real-life ones with friends and families. 
+2) Net Compulsion (NC), which includes compulsive online social gaming or  gambling, often resulting in financial and job-related problems. 
+3) Information Overload (IO),which includes addictive surfing of user status and  news feeds, leading to lower work productivity and fewer social interactions with families  and friends offline.  
+Accordingly, we formulate the detection of SNMD cases as a classification problem. We  detect each type of SNMDs with a KNN classifier and LRM. In this study, we propose a  two-phase framework, called SNMDD. The first phase extracts various discriminative  features of users, while the second phase presents a new SNMD-based tensor model to  derive latent factors for training and use of classifiers built upon KNN and LRM. Two key  challenges exist in design of SNMDD:  
+∙ We are not able to directly extract mental factors like what have been done via  questionnaires in Psychology and thus need new features for learning the  classification models.  
+∙ We aim to exploit user data logs from multiple OSNs and thus need new  techniques for integrating multi-source data based on SNMD characteristics.
+3.1. K-Nearest Neighbour 
+K-Nearest neighbour is a lazy learner technique. This algorithm depends on learning by  analogy. It is a supervised classification method. This classifier is used extensively for  classification purpose. This classifier waits till the last minute prior to build some model  on a specified tuple as compared to earlier classifiers. The training tuples are  characterized in N-dimensional space in this classifier. This classification model looks for  the k training tuples nearest to the indefinite sample in case of an indefinite tuple. Then,  this classifier puts the sample in the closest class. 
+</p>
+  
+</article>
+
+<article>
+  <h2>Conclusions</h2>
+  <p>In this paper, we try to automatically identify potential online users with SNMDs. We propose an SNMDD framework that explores various features from data logs of OSNs  and a new tensor technique for deriving latent features from multiple OSNs for SNMD  detection. This work represents a collaborative effort between computer scientists and  mental healthcare researchers to address emerging issues in SNMDs. As for the next step,  we plan to study the features extracted from multimedia contents by techniques on NLP 
+and computer vision. We also plan to further explore new issues from the perspective of a  social network service provider, e.g., Facebook or Instagram, to improve the well-beings  of OSN users without compromising the user engagement. 
+</p>
+</article>
+
+<article>
+  <h2>References</h2>
+  <p>[1] K. Young, M.Pistner, J.O’Mara, and J. Buchanan. Cyber-disorders: The mental  health concern for the new millennium. Cyberpsychol. Behav., 1999. 
+[2] J. Block. Issues of DSM-V: internet addiction. American Journal of Psychiatry,  2008. 
+[3] K. Young. Internet addiction: the emergence of a new clinical disorder,  Cyberpsychol. Behav., 1998. 
+[4] I.-H. Lin, C.-H. Ko, Y.-P. Chang, T.-L. Liu, P.-W. Wang, H.-C. Lin, M.-F.  Huang, Y.-C. Yeh, W.-J. Chou, and C.-F. Yen. The association between suicidality and  Internet addiction and activities in Taiwanese adolescents. Compr. Psychiat., 2014. [5] Y. Baek, Y. Bae, and H. Jang. Social and parasocial relationships on social  network sites and their differential relationships with users’ psychological well-being.  Cyberpsychol. Behav. Soc. Netw., 2013.  
+[6] D. La Barbera, F. La Paglia, and R. Valsavoia. Social network and addiction.  Cyberpsychol. Behav., 2009.  
+[7] K. Chak and L. Leung. Shyness and locus of control as predictors of internet  addiction and internet use. Cyberpsychol. Behav., 2004.  
+[8] K. Caballero and R. Akella. Dynamically modeling patients health state from electronic medical records: a time series approach. KDD, 2016.
+[9] L. Zhao and J. Ye and F. Chen and C.-T. Lu and N. Ramakrishnan. Hierarchical  Incomplete multi-source feature learning for Spatiotemporal Event Forecasting. KDD,  2016.  
+[10] E. Baumer, P. Adams, V. Khovanskaya, T. Liao, M. Smith, V. Sosik, and K.  Williams. Limiting, leaving, and (re)lapsing: an exploration of Facebook non-use  practices and experiences. CHI, 2013. 
+[11] D. L. King, P. H. Delfabbro, D. Kaptsis, and T. Zwaans. Adolescent simulated  gambling via digital and social media: an emerging problem. Computers in Human  Behavior, 2014. 
+[12] D. Li, X. Li, L. Zhao, Y. Zhou, W. Sun, and Y. Wang. Linking multiple risk  exposure profiles with adolescent Internet addiction: insights from the person-centered  approach. Computers in Human Behavior, 2017. 
+[13] K. Kim, H. Lee,J. P. Hong, M.J. Cho, M. Fava,D. Mischoulon, D. J. Kim, and H.  J. Jeon. Poor sleep quality and suicide attempt among adults with internet addiction: a  nationwide community sample of Korea. PLOS ONE, 2017. 
+ </p>
+</article>
+
+<h2>Addendum:</h2>
+
+<p><b>Font Choices:</b> For the main text, I've chosen the "Cursive" font to give the paragraphs a handwritten, decorative look. This adds a unique and artistic touch to the content.
+The headings (h1 and h2) use the "Georgia" serif font. Serif fonts are often associated with traditional and formal designs, which is why I've chosen Georgia to add a touch of sophistication to the headings.
+The first paragraph uses the "Palatino Linotype" font, another serif font. It stands out as an introduction or special section within the content, providing a visual hierarchy.</p>
+<p><b>Sizes of Headings and Main Text:</b> The h1 element is set to a larger font size (36px) to create a prominent title at the top of the page.
+h2 elements have a slightly smaller font size (28px) to provide clear differentiation from the h1.
+The main text (paragraphs) is styled with a font size of 16px, which is easy to read and offers good legibility.</p>
+<p><b>Color Choices:</b> The h1 element uses the color red to draw immediate attention to the main title.
+h2 elements are styled with a blue color that complements the red h1.
+The main text (paragraphs) is given an earthy green color (#556B2F) to create a harmonious and readable text background contrasted with a light background.
+The first paragraph has a slightly different shade of green for visual separation.</p>
+<p><b>Margin and Padding Choices:</b> A margin of 10px is applied to paragraphs to control the spacing between them, making the content more readable.
+Articles are given padding (20px) to create separation between the content and the border, improving the visual appeal.</p>
+</body>
+</html>
+
+
+
+
+
+
+
+
