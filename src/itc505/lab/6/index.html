@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Holy Grail Layout</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header>    
+    <h1 class="title">Cosmetics</h1>
+  </header>
+
+  <div class="container">
+    <nav>
+      <ul>
+	    <li><u><a href="#">Menu</a></u></li>
+        <li><a href="#">EyeLashes</a></li>
+        <li><a href="#">Kajal</a></li>
+        <li><a href="#">shades</a></li>
+		<li><a href="#">Eyebrow pencil</a></li>
+		<li><a href="#">lip shades</a></li>
+		<li><a href="#">Maskara</a></li>
+      </ul>
+    </nav>
+
+    <main id="content">
+<div class="counter">
+  <div id="product-container"></div>
+<button id="show-product-button">Show Product</button>
+</div>
+    </main>
+
+    <aside id="advertisement">
+      <a href="https://www.zara.com/us/en/eyelash-serum-p24660200.html?v1=276540448&v2=1881272" target="_blank">
+        <img src="https://static.zara.net/photos///2023/I/2/1/p/4660/200/991/2/w/364/4660200991_6_1_1.jpg?ts=1692805848210" alt="Advertisement">
+      </a>
+    </aside>
+  </div>
+	<footer>
+<div class="addendum">
+  <h2>Addendum</h2>
+  <p>
+    The JavaScript code in script.js enhances user interaction by dynamically showcasing random makeup product information upon clicking the "Show Product" button.
+    It leverages the DOMContentLoaded event to ensure proper page loading before interacting with the Document Object Model (DOM).
+  </p>
+  <h3>Overview</h3>
+  <p>
+    The core functionality involves selecting a random makeup product from the 'makeupProducts' array and dynamically creating an HTML element to display its details.
+    The code uses template literals and conditional statements to handle optional product information such as 'shade' and 'type.'
+  </p>
+  <h3>Challenges and Solutions</h3>
+  <ul>
+    <li>
+      <strong>Flexible Product Information:</strong> The code accommodates variations in product details, allowing for easy extension of the product data without modifying the code.
+    </li>
+    <li>
+      <strong>No Major Implementation Challenges:</strong> The development process did not encounter significant difficulties. The code is designed to be straightforward and adaptable.
+    </li>
+  </ul>
+</div>
+
+	</footer>
+
+
+  <script src="script.js"></script>
+</body>
+</html>
